@@ -1,20 +1,13 @@
-# PyTorch for CUDA 13.0 (using CUDA 12.x builds for compatibility)
-# Note: PyTorch typically provides builds for major CUDA versions (12.1, 12.4)
-# CUDA 12.x builds should work with CUDA 13.0 due to forward compatibility
+# PyTorch nightly build with native CUDA 13.0 support
+--pre
+--index-url https://download.pytorch.org/whl/nightly/cu130
+torch
+torchvision
+torchaudio
 
-# Primary option: Latest stable PyTorch with CUDA 12.4 (compatible with CUDA 13.0)
---extra-index-url https://download.pytorch.org/whl/cu124
-torch==2.5.1+cu124
-torchvision==0.20.1+cu124
-torchaudio==2.5.1+cu124
-
-# Alternative: Nightly builds (if you need cutting-edge features for CUDA 13.0)
-# --extra-index-url https://download.pytorch.org/whl/nightly/cu124
-# torch torchvision torchaudio --pre
-
-# Core dependencies updated for Python 3.13.5 compatibility
-numpy>=1.26.0,<2.0
-Pillow>=10.0.0
-huggingface_hub>=0.20.0
-einops>=0.7.0
-safetensors>=0.4.0
+# Core dependencies - updated for Python 3.13
+numpy>=2.0.0
+Pillow
+huggingface_hub
+einops
+safetensors
