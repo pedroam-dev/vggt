@@ -10,7 +10,7 @@ dtype = torch.bfloat16 if torch.cuda.get_device_capability()[0] >= 8 else torch.
 # This will automatically download the model weights the first time it's run, which may take a while.
 model = VGGT.from_pretrained("facebook/VGGT-1B").to(device)
 
-# Load and preprocess example images (replace with your own image paths)
+# Load and preprocess example images (adapted with your image path)
 image_names = ["C:/Users/pedroam/Documents/Datasets/VisDrone/img/train/images/0000002_00005_d_0000014.jpg"]  
 images = load_and_preprocess_images(image_names).to(device)
 
